@@ -14,3 +14,17 @@
 $app->get('/', function() use ($app) {
     return $app->welcome();
 });
+
+$app->get(
+    'episodes/all',
+    [
+        'uses' => 'App\Http\Controllers\EpisodeController@get_all_episodes'
+    ]
+);
+
+$app->get(
+    'episode/{id}',
+    [
+        'uses' => 'App\Http\Controllers\EpisodeController@get_single_episode'
+    ]
+);
