@@ -1,44 +1,45 @@
 <?php namespace App\Http\Controllers;
 
 use DB;
-use App\Models\Episode;
+use App\Models\Extra;
 
-class EpisodeController extends Controller {
+class ExtraController extends Controller {
 
     /**
-     * Get all episodes.
+     * Get all extras.
      *
      * @return Response
      */
     public function index()
     {
         return response()->json(
-            Episode::all()
+            Extra::all()
         );
     }
 
     /**
-     * Get single episodes.
+     * Get single extras.
      *
      * @return Response
      */
-    public function get_single_episode($id)
+    public function get_single_extra($id)
     {
         return response()->json(
-            Episode::where('id', $id)
+            Extra::where('id', $id)
                 ->get()
         );
     }
 
     /**
-     * Search episodes.
+     * Get episode extras.
      *
      * @return Response
      */
-    public function search_episodes($terms)
+    public function get_episode_extra($id)
     {
         return response()->json(
-            Episode::all()
+            Extra::where('episode_id', $id)
+                ->get()
         );
     }
 }
