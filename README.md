@@ -7,11 +7,11 @@ Built with Laravel's LUMEN framework.
 
 Current Routes
 ```
-GET api.jakeandamir.com/episodes
-GET api.jakeandamir.com/episodes/{id}
-GET api.jakeandamir.com/episodes/{id}/extras
+GET api.jakeandamir.com/api/v1/episodes
+GET api.jakeandamir.com/api/v1/episodes/{id}
+GET api.jakeandamir.com/api/v1/episodes/{id}/extras
 
 
-GET api.jakeandamir.com/extras
-GET api.jakeandamir.com/extras/{id}
+GET api.jakeandamir.com/api/v1/extras
+GET api.jakeandamir.com/api/v1/extras/{id}
 ```
