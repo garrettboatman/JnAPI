@@ -22,7 +22,8 @@ Search functionality via [nicolaslopezj/searchable](https://github.com/nicolaslo
 
 1. clone this repository
 1. `cd` into the project and `composer install`
-1. configure the `.env` file
+1. configure the `.env` file (If you need a copy of the episode database, email [hello@garrettboatman.com](mailto:hello@garrettboatman.com))
+1. build away!
 
 ### License
 
