@@ -25,3 +25,29 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ### License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
+# JnAPI
+A public RESTful API for all Jake &amp; Amir episodes.
+
+--
+
+### Using the API
+```
+GET api.jakeandamir.com/api/v1/episodes
+GET api.jakeandamir.com/api/v1/episodes/{id}
+GET api.jakeandamir.com/api/v1/episodes/{id}/extras
+
+
+GET api.jakeandamir.com/api/v1/extras
+GET api.jakeandamir.com/api/v1/extras/{id}
+```
+
+### Building the API
+Built with the [Laravel](http://laravel.com/docs/5.1) framework.
+
+Search functionality via [nicolaslopezj/searchable](https://github.com/nicolaslopezj/searchable).
+
+
+1. clone this repository
+1. `cd` into the project and `composer install`
+1. configure the `.env` file
