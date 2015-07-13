@@ -14,7 +14,7 @@ GET api.jakeandamir.com/api/v1/extras // Get all extras
 GET api.jakeandamir.com/api/v1/extras/{id} // Get single extra
 ```
 
-### Building the APIGET api.jakeandamir.com/api/v1/episodes/{id}/extras
+### Building the API
 Built with the [Laravel](http://laravel.com/docs/5.1) framework.
 
 Search functionality via [nicolaslopezj/searchable](https://github.com/nicolaslopezj/searchable).
