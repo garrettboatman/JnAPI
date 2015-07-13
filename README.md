@@ -1,66 +1,27 @@
-# JnAPI
-A public RESTful API for all Jake &amp; Amir episodes.
+## Laravel PHP Framework
 
---
+[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
+[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
+[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
+[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
+[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
-### Using the API
-```
-GET api.jakeandamir.com/api/v1/episodes
-GET api.jakeandamir.com/api/v1/episodes/{id}
-GET api.jakeandamir.com/api/v1/episodes/{id}/extras
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
 
+Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
 
-GET api.jakeandamir.com/api/v1/extras
-GET api.jakeandamir.com/api/v1/extras/{id}
-```
+## Official Documentation
 
-### Building the API
-Built with Laravel's LUMEN framework.
+Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
 
-1. clone this repository
-1. `cd` into the project and `composer install`
-1. configure the `.env` file (copy config settings below)
+## Contributing
 
-### .env
-Your `.env` file should look like this
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
 
-```
-APP_ENV=local
-APP_DEBUG=true
-APP_KEY=9L{G+D6}GL6ycwR2JhU%8pdtX9bZ&y(G
+## Security Vulnerabilities
 
-APP_LOCALE=en
-APP_FALLBACK_LOCALE=en
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
 
-DB_CONNECTION=mysql
-DB_HOST=localhost
-DB_PORT=3306
-DB_DATABASE=janda
-DB_USERNAME=root
-DB_PASSWORD=mysql
+### License
 
-CACHE_DRIVER=memcached
-SESSION_DRIVER=memcached
-QUEUE_DRIVER=database
-
-# MAIL_DRIVER=smtp
-# MAIL_HOST=mailtrap.io
-# MAIL_PORT=2525
-# MAIL_USERNAME=null
-# MAIL_PASSWORD=null
-# MAIL_FROM_ADDRESS=null
-# MAIL_FROM_NAME=null
-
-# FILESYSTEM_DRIVER=local
-# FILESYSTEM_CLOUD=s3
-
-# S3_KEY=null
-# S3_SECRET=null
-# S3_REGION=null
-# S3_BUCKET=null
-
-# RACKSPACE_USERNAME=null
-# RACKSPACE_KEY=null
-# RACKSPACE_CONTAINER=null
-# RACKSPACE_REGION=null
-```
+The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
