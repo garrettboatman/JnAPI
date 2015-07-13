@@ -5,7 +5,6 @@ A public RESTful API for all Jake &amp; Amir episodes.
 
 ### Using the API
 ```
-
 GET api.jakeandamir.com/api/v1/episodes // Gets all episodes
 GET api.jakeandamir.com/api/v1/episodes/{id} // Gets a single episode
 GET api.jakeandamir.com/api/v1/episodes/{id}/extras // Gets an episode's extras
