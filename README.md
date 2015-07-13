@@ -33,16 +33,17 @@ A public RESTful API for all Jake &amp; Amir episodes.
 
 ### Using the API
 ```
-GET api.jakeandamir.com/api/v1/episodes
-GET api.jakeandamir.com/api/v1/episodes/{id}
-GET api.jakeandamir.com/api/v1/episodes/{id}/extras
 
+GET api.jakeandamir.com/api/v1/episodes // Gets all episodes
+GET api.jakeandamir.com/api/v1/episodes/{id} // Gets a single episode
+GET api.jakeandamir.com/api/v1/episodes/{id}/extras // Gets an episode's extras
+GET api.jakeandamir.com/api/v1/episodes/search/{string} // Search results (from Title & Script)
 
-GET api.jakeandamir.com/api/v1/extras
-GET api.jakeandamir.com/api/v1/extras/{id}
+GET api.jakeandamir.com/api/v1/extras // Get all extras
+GET api.jakeandamir.com/api/v1/extras/{id} // Get single extra
 ```
 
-### Building the API
+### Building the APIGET api.jakeandamir.com/api/v1/episodes/{id}/extras
 Built with the [Laravel](http://laravel.com/docs/5.1) framework.
 
 Search functionality via [nicolaslopezj/searchable](https://github.com/nicolaslopezj/searchable).
