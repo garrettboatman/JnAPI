@@ -4,7 +4,6 @@ A public RESTful API for all Jake &amp; Amir episodes.
 --
 
 ### Using the API
-```
 Checkout the [Jake & Amir API Documentation](https://jnapi.gelato.io/guides/getting-started).
 
 ### Building the API
