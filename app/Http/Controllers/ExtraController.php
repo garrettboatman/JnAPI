@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Episode;
+use App\Extra;
 use Chrisbjr\ApiGuard\Http\Controllers\ApiGuardController;
 
 class ExtraController extends ApiGuardController {
