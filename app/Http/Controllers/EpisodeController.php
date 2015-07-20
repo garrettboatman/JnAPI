@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Episode;
-use App\Http\Controllers\Controller;
+use Chrisbjr\ApiGuard\Http\Controllers\ApiGuardController;
 
-class EpisodeController extends Controller {
+class EpisodeController extends ApiGuardController {
 
     /**
      * Get all episodes.

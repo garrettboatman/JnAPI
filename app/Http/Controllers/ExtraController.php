@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Extra;
-use App\Http\Controllers\Controller;
+use App\Episode;
+use Chrisbjr\ApiGuard\Http\Controllers\ApiGuardController;
 
-class ExtraController extends Controller {
+class ExtraController extends ApiGuardController {
 
     /**
      * Get all extras.
