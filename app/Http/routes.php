@@ -16,11 +16,11 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'api/v1'], function(){
-    Route::get('episodes','EpisodeController@index');
-    Route::get('episodes/{id}','EpisodeController@get_single_episode');
+
+    Route::resource('episodes', 'EpisodeController', ['except' => ['create', 'edit']]);
+    Route::resource('extras', 'ExtraController', ['except' => ['create', 'edit']]);
+
     Route::get('episodes/{id}/extras','ExtraController@get_episode_extra');
     Route::get('episodes/search/{terms}','EpisodeController@search_episodes');
-    // Extra Routes
-    Route::get('extras','ExtraController@index');
-    Route::get('extras/{id}','ExtraController@get_single_extra');
+
 });

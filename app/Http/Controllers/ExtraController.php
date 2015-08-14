@@ -2,34 +2,79 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+
 use App\Extra;
+use App\Http\Requests;
 use Chrisbjr\ApiGuard\Http\Controllers\ApiGuardController;
 
-class ExtraController extends ApiGuardController {
-
+class ExtraController extends ApiGuardController
+{
     /**
-     * Get all extras.
+     * Display a listing of the resource.
      *
      * @return Response
      */
     public function index()
     {
         return response()->json(
-            Extra::all()
+            ['data' => Extra::all()]
         );
     }
 
     /**
-     * Get single extras.
+     * Store a newly created resource in storage.
      *
+     * @param  Request  $request
      * @return Response
      */
-    public function get_single_extra($id)
+    public function store(Request $request)
     {
-        return response()->json(
-            Extra::where('id', $id)
-                ->get()
-        );
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function show($id)
+    {
+        $extra = Extra::where('id', $id)->get();
+        if($extra->isEmpty()){
+            return response()->json(
+                ['status' => 404, 'detail' => 'Extra not found.'],
+                404
+            );
+        } else{
+            return response()->json(
+                ['data' => $extra]
+            );
+        }
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  Request  $request
+     * @param  int  $id
+     * @return Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function destroy($id)
+    {
+        //
     }
 
     /**
@@ -39,9 +84,16 @@ class ExtraController extends ApiGuardController {
      */
     public function get_episode_extra($id)
     {
-        return response()->json(
-            Extra::where('episode_id', $id)
-                ->get()
-        );
+        $extras = Extra::where('episode_id', $id)->get();
+        if($extras->isEmpty()){
+            return response()->json(
+                [],
+                204
+            );
+        } else{
+            return response()->json(
+                ['data' => $extras]
+            );
+        }
     }
 }
