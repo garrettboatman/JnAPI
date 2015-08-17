@@ -14,7 +14,7 @@ class CreateEpisodeRequest extends Request
     public function authorize()
     {
         // Creating Episodes is forbidden for now.
-        return true;
+        return false;
     }
 
     /**
