@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Episode;
 use App\Http\Requests;
 use Chrisbjr\ApiGuard\Http\Controllers\ApiGuardController;
+use App\Http\Requests\CreateEpisodeRequest;
+
 
 class EpisodeController extends ApiGuardController
 {
@@ -26,12 +28,22 @@ class EpisodeController extends ApiGuardController
     /**
      * Store a newly created resource in storage.
      *
-     * @param  Request  $request
+     * @param  CreateEpisodeRequest  $request
      * @return Response
      */
-    public function store(Request $request)
+    public function store(CreateEpisodeRequest $request)
     {
-        //
+        $values = $request->only([
+            'title',
+            'link',
+            'script',
+            'duration',
+            'air_date',
+            'scribe',
+            'embed_src'
+        ]);
+        $epidode = Episode::create($values);
+        return response()->json(['id' => $epidode->id, 'data' => $values], 201);
     }
 
     /**
