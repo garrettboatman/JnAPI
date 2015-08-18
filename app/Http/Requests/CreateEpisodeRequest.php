@@ -25,9 +25,13 @@ class CreateEpisodeRequest extends Request
     public function rules()
     {
         return [
-            'title' => 'required',
+            'title' => 'required|string|min:5',
+            'link' => 'url|active_url',
             'script' => 'required',
-            'embed_src'  => 'required'
+            'duration',
+            'air_date',
+            'scribe' => 'string',
+            'embed_src'  => 'required|url|active_url'
         ];
     }
 
